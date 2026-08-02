@@ -1,0 +1,234 @@
+/* Riseul Ryu — shared styles
+   A print grid, not a web template. Flush left, asymmetric, one accent.
+   Nothing animates. No JavaScript anywhere on this site.
+
+   TO CHANGE THE TYPEFACE: edit the @import and the two --font lines.
+   See fonts.html for options and copy-paste snippets. */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+
+:root{
+  --font:      'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-head: 'Archivo', Helvetica, Arial, sans-serif;
+  --size:      18.5px;
+
+  --paper:  #FAF9F5;
+  --ink:    #14161A;
+  --muted:  #6E6B63;
+  --rule:   #D8D5CC;
+  --accent: #9E3520;   /* printer's red. Rules, figure numbers, links. Never body text. */
+
+  --gut:    clamp(20px,4vw,54px);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font);font-size:var(--size);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:.5px}
+a:hover{text-decoration-thickness:1.5px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ============ masthead: a running head, like a journal ============ */
+.masthead{border-bottom:2px solid var(--ink);padding:0 var(--gut)}
+.masthead .in{
+  max-width:1240px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:20px;padding:15px 0 13px;flex-wrap:wrap;
+}
+.masthead .who{
+  font-family:var(--font-head);font-weight:800;font-size:15px;
+  letter-spacing:-.01em;text-transform:uppercase;
+}
+.masthead nav{font-family:var(--font-head);font-size:13.5px;letter-spacing:.04em;text-transform:uppercase}
+.masthead nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:500}
+.masthead nav a:first-child{margin-left:0}
+.masthead nav a:hover{color:var(--accent)}
+.masthead nav .here{margin-left:20px;color:var(--ink);font-weight:600}
+.masthead nav .here:first-child{margin-left:0}
+@media(max-width:560px){.masthead nav a,.masthead nav .here{margin-left:14px}}
+
+/* ============ the grid ============
+   Wide screens: a narrow margin column carries section numbers and notes,
+   the text column sits at a fixed reading measure, asymmetric on purpose. */
+.sheet{max-width:1240px;margin:0 auto;padding:0 var(--gut) 90px}
+
+.band{border-top:1px solid var(--rule);padding:38px 0 0;margin-top:38px}
+.band.first{border-top:0;margin-top:0}
+
+.row{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:1000px){
+  .row{grid-template-columns:120px minmax(0,640px) minmax(0,1fr);gap:0 40px;align-items:start}
+  .row > .marginal{grid-column:1}
+  .row > .text{grid-column:2}
+  .row > .aside-col{grid-column:3}
+}
+
+.marginal{
+  font-family:var(--font-head);font-size:12.5px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+  padding-top:6px;margin-bottom:10px;
+}
+.marginal .of{color:var(--muted);font-weight:400}
+
+.text > *:first-child{margin-top:0}
+.aside-col{padding-top:6px}
+
+/* ============ type ============ */
+h1{
+  font-family:var(--font-head);font-weight:800;
+  font-size:clamp(40px,8vw,86px);line-height:.94;letter-spacing:-.035em;
+  margin:44px 0 0;text-transform:uppercase;
+}
+.standfirst{
+  font-family:var(--font-head);font-weight:500;
+  font-size:clamp(16px,2.2vw,20px);line-height:1.35;letter-spacing:-.01em;
+  color:var(--muted);margin:14px 0 0;max-width:34ch;
+}
+
+h2{
+  font-family:var(--font-head);font-weight:600;
+  font-size:clamp(21px,2.6vw,27px);line-height:1.18;letter-spacing:-.02em;
+  margin:0 0 16px;
+}
+h3{
+  font-family:var(--font-head);font-weight:600;font-size:16px;
+  letter-spacing:.005em;margin:30px 0 8px;
+}
+
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+.text p{max-width:64ch}
+
+.lead{font-family:var(--font-head);font-weight:600;font-size:.8em;letter-spacing:.09em;text-transform:uppercase}
+
+/* ============ figure ============ */
+figure{margin:0}
+.fig{border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);padding:22px 0 12px}
+.fig svg{display:block;width:100%;height:auto}
+figcaption{
+  font-family:var(--font-head);font-size:12.5px;line-height:1.5;color:var(--muted);
+  margin-top:12px;max-width:70ch;
+}
+figcaption b{color:var(--accent);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* ============ pull quote ============ */
+.pull{
+  font-family:var(--font-head);font-weight:600;
+  font-size:clamp(19px,2.4vw,25px);line-height:1.25;letter-spacing:-.02em;
+  border-top:2px solid var(--accent);padding:16px 0 0;margin:32px 0;max-width:26ch;
+}
+
+/* ============ sidenote ============ */
+.note{
+  font-family:var(--font-head);font-size:13px;line-height:1.55;color:var(--muted);
+  border-top:1px solid var(--rule);padding:10px 0 0;margin:0 0 26px;
+}
+.note b{display:block;color:var(--ink);font-weight:600;margin-bottom:3px;letter-spacing:.02em}
+@media(max-width:999px){
+  .aside-col{margin-top:26px}
+  .note{max-width:52ch}
+}
+
+/* ============ tables ============ */
+table{border-collapse:collapse;width:100%;margin:0 0 1.05em;font-size:15.5px}
+caption{
+  text-align:left;font-family:var(--font-head);font-size:12.5px;color:var(--muted);
+  letter-spacing:.06em;text-transform:uppercase;padding-bottom:8px;
+}
+th{
+  text-align:left;font-family:var(--font-head);font-weight:600;font-size:11.5px;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border-bottom:1px solid var(--ink);padding:0 14px 6px 0;vertical-align:bottom;
+}
+td{
+  border-bottom:1px solid var(--rule);padding:9px 14px 9px 0;vertical-align:top;
+  line-height:1.45;
+}
+th:last-child,td:last-child{padding-right:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.q{color:var(--muted)}
+tr:last-child td{border-bottom:1px solid var(--ink)}
+
+/* ============ staging band ============ */
+.stage{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:6px 0 1.05em;border-top:2px solid var(--ink)}
+.stage > div{border-right:1px solid var(--rule);padding:14px 20px 16px 0}
+.stage > div:last-child{border-right:0;padding-left:20px}
+.stage .yr{
+  font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 6px;
+}
+.stage p{font-size:16px;line-height:1.5;margin:0}
+@media(max-width:620px){
+  .stage{grid-template-columns:1fr}
+  .stage > div{border-right:0;border-bottom:1px solid var(--rule);padding:14px 0 16px}
+  .stage > div:last-child{border-bottom:0;padding-left:0}
+}
+
+/* ============ lists ============ */
+ul.run{padding-left:1.05em;margin:0 0 1.05em;max-width:64ch}
+ul.run li{margin-bottom:.5em;padding-left:.15em}
+ul.run li::marker{color:var(--accent)}
+ol.aims{padding-left:1.3em;margin:0 0 1.05em;max-width:64ch}
+ol.aims li{margin-bottom:.7em;padding-left:.3em}
+ol.aims li::marker{font-family:var(--font-head);font-weight:600;font-size:.85em;color:var(--accent)}
+
+/* ============ publication index ============ */
+.pubs{width:100%;border-collapse:collapse;font-size:16px;margin:0 0 1.05em}
+.pubs td{border-bottom:1px solid var(--rule);padding:11px 12px 11px 0;vertical-align:top}
+.pubs td.n{
+  width:2.6em;font-family:var(--font-head);font-size:12.5px;font-weight:600;
+  color:var(--accent);padding-top:15px;font-variant-numeric:tabular-nums;
+}
+.pubs .src{display:block;color:var(--muted);font-size:14.5px;line-height:1.5;margin-top:3px}
+.pubs .src em{font-style:italic}
+.pubs tr:last-child td{border-bottom:1px solid var(--ink)}
+
+/* ============ references ============ */
+.refs{font-size:14.5px;line-height:1.5;color:var(--muted);max-width:66ch}
+.refs ol{padding:0;margin:0;list-style:none}
+.refs li{margin:0 0 10px;padding-left:1.5em;text-indent:-1.5em}
+
+/* ============ onward ============ */
+.onward{border-top:2px solid var(--ink);margin-top:14px}
+.onward a{
+  display:block;border-bottom:1px solid var(--rule);padding:18px 0 16px;
+  text-decoration:none;color:var(--ink);
+}
+.onward a:last-child{border-bottom:1px solid var(--ink)}
+.onward .t{
+  font-family:var(--font-head);font-weight:800;font-size:clamp(22px,3vw,30px);
+  letter-spacing:-.028em;text-transform:uppercase;display:block;
+}
+.onward .d{display:block;color:var(--muted);font-size:16px;line-height:1.45;margin-top:5px;max-width:60ch;font-family:var(--font)}
+.onward a:hover .t{color:var(--accent)}
+
+/* ============ colophon ============ */
+.colophon{
+  border-top:2px solid var(--ink);margin-top:56px;padding-top:16px;
+  display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;
+  font-family:var(--font-head);font-size:13px;line-height:1.7;color:var(--muted);
+}
+.colophon b{color:var(--ink);font-weight:600}
+.colophon .folio{font-variant-numeric:tabular-nums;letter-spacing:.08em;text-transform:uppercase}
+
+@media(max-width:560px){
+  :root{--size:17.5px}
+}
+
+@media print{
+  :root{--paper:#fff;--accent:#000}
+  body{font-size:10pt;line-height:1.42}
+  .masthead nav,.onward{display:none}
+  .sheet{max-width:100%;padding:0}
+  .row{display:block}
+  .marginal{margin-bottom:4px}
+  .aside-col{margin-top:14px}
+  h2,h3,caption{page-break-after:avoid}
+  tr,figure,.stage,.pull{page-break-inside:avoid}
+  a{color:#000;text-decoration:none}
+}
