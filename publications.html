@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | Dr Riseul Ryu</title>
+<meta name="description" content="Peer-reviewed publications of Dr Riseul Ryu, with DOI links and BibTeX.">
+<meta property="og:title" content="Publications | Dr Riseul Ryu">
+<meta property="og:description" content="Peer-reviewed publications of Dr Riseul Ryu, with DOI links and BibTeX.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="publications">
+<main>
+  <div class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html">Home</a> / Publications</div><h1>Publications</h1></div></div>
+  <section class="block">
+    <div class="wrap sec">
+      <div class="sec-label"><h2>All publications</h2></div>
+      <div class="sec-body">
+        <p id="pubSummary"></p>
+        <div class="toolbar">
+          <input id="q" type="search" placeholder="Search title, co-author or venue" aria-label="Search publications">
+          <select id="yearSel" aria-label="Filter by year"></select>
+          <button class="btn ghost" id="allBib" type="button">Copy all BibTeX</button>
+        </div>
+        <div class="seg" id="typeSeg"></div>
+        <p class="muted small" id="pubCount" style="margin:0"></p>
+        <div id="pubList"></div>
+      </div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap sec">
+      <div class="sec-label"><h2>Under review</h2></div>
+      <div class="sec-body"><ul class="plain" id="review"></ul></div>
+    </div>
+  </section>
+</main>
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
