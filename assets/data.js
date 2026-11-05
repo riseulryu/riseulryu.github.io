@@ -72,14 +72,14 @@ window.SITE = {
       "I work with collaborators at the University of Tasmania and Chonnam National University, Korea."
     ],
     areas: [
-      { id: "mental-health", title: "AI in mental health", status: "Planned direction", tag: "",
+      { id: "mental-health", title: "AI in mental health", status: "Ongoing", tag: "",
         short: "Whether passive behavioural and biometric signals can indicate mental health conditions.",
         overview: [
           "My next direction is behavioural digital biomarkers for mental health: whether passive behavioural and biometric signals can indicate mental health conditions.",
           "I plan to focus on diverse populations, including young people, and to carry over the user-dependent adaptation approach from my PhD, since people's signals vary in different ways."
         ],
         noPubs: "No publications in this area yet." },
-      { id: "biometrics", title: "Biometric authentication", status: "PhD research", tag: "bio",
+      { id: "biometrics", title: "Biometric authentication", status: "PhD research & Ongoing", tag: "bio",
         short: "Face and keystroke authentication that adapts to each user over time and across devices.",
         overview: [
           "My PhD, Dynamic Adaptation in Multimodal Biometric Authentication (University of Tasmania, 2026; supervisors A/Prof Julian Dermoudy, Dr Soonja Yeom and Dr David Herbert), looked at authentication that combines face and keystroke dynamics and adapts to each user over time and across devices.",
