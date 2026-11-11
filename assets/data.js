@@ -192,7 +192,7 @@ window.SITE = {
 
   /* ---------------- Public engagement (home page) ---------------- */
   engagement: [
-    { when: "2025–present", what: "Organising Committee", where: "Asia-Korea Conference on Science and Technology 2026 (AKC 2026)" },
+    { when: "2026", what: "Organising Committee & Chair for Workshop for Next-Generation Scientists and Engineers", where: "Asia-Korea Conference on Science and Technology 2026 (AKC 2026)" },
     { when: "Guest lecture", what: "\"Artificial Intelligence in Healthcare\"", where: "BAA500 Introduction to Health Information Management, University of Tasmania", detail: "Master of Health Service Management" },
     { when: "2024–present", what: "Administrator, Web Manager and Editor", where: "Korean Academy of Scientists and Engineers in Australasia (KASEA)" },
     { when: "2023, 2025", what: "Australia representative, Young Professional Forum", where: "Korean Federation of Science and Technology Societies (KOFST)" },
