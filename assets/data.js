@@ -181,7 +181,7 @@ window.SITE = {
       { value: "6", label: "Student Nominated Teaching Awards", note: "University of Tasmania: 2019, 2020, 2022, 2023, 2024, 2025" },
       { value: "2", label: "Teaching Merit Certificates", note: "University of Tasmania: 2021, 2023" },
       { value: "98.07%", label: "Student satisfaction", note: "Charles Sturt University, 2025 (57% response rate)" },
-      { value: "89%", label: "Student satisfaction", note: "Charles Sturt University, 2025 (27% response rate)" }
+      { value: "89%", label: "Student satisfaction", note: "Charles Sturt University, 2025 (27% response rate)" },
       { value: "100%", label: "Student satisfaction in Teaching Survey", note: "University of Tasmania, 2026 (60% response rate)" }
     ],
     supervision: [
@@ -190,6 +190,18 @@ window.SITE = {
       "As Adjunct Researcher at UTAS (Oct 2026–present), scope to co-supervise research students."
     ]
   },
+
+  /* ---------------- Awards and honours (home and bio pages) ----------------
+     Newest first. "url" is optional: link to a news story, certificate or
+     program page as evidence. "detail" is an optional second line. */
+  awards: [
+    { when: "2026", what: "ICT Research Excellence Award", where: "School of ICT, University of Tasmania",
+      detail: "Presented at the School's inaugural ICT Awards Night",
+      url: "https://www.utas.edu.au/about/news-and-stories/articles/2026/students-celebrated-at-inaugural-ict-awards-night", urlLabel: "UTAS news story" },
+    { when: "2019–2025", what: "Student Nominated Teaching Award (×6)", where: "University of Tasmania",
+      detail: "2019, 2020, 2022, 2023, 2024, 2025" },
+    { when: "2021, 2023", what: "Teaching Merit Certificate (×2)", where: "University of Tasmania" }
+  ],
 
   /* ---------------- Public engagement (home page) ---------------- */
   engagement: [
