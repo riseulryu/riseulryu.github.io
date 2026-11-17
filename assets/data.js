@@ -18,12 +18,12 @@ window.SITE = {
   /* ---------------- Home page ---------------- */
   // Facts shown in the panel beside your name on the home page
   heroFacts: [
-    { k: "Current role", v: "Academic Manager (Business) / Senior Lecturer, Education Centre of Australia, Sydney" },
+    { k: "Current role", v: "Academic Manager, Education Centre of Australia, Sydney" },
     { k: "Also", v: "Adjunct Researcher, School of ICT, University of Tasmania" },
     { k: "PhD", v: "Information Technology, University of Tasmania, 2026" },
     { k: "Focus", v: "Adaptive machine learning · Biometric authentication · Computing education" }
   ],
-  intro: "I'm an Academic Manager (Business) and Senior Lecturer at Education Centre of Australia in Sydney, which delivers University of Tasmania programs at the Ultimo Study Centre, and an Adjunct Researcher in the UTAS School of ICT. I completed my PhD in Information Technology at the University of Tasmania in 2026.",
+  intro: "I'm an Academic Manager at Education Centre of Australia in Sydney, which delivers University of Tasmania programs at the Ultimo Study Centre, and an Adjunct Researcher in the UTAS School of ICT. I completed my PhD in Information Technology at the University of Tasmania in 2026.",
   home: {
     research: "My research is on adaptive machine learning: models that keep working as the people using them change. I apply it to biometric authentication and computing education, and I'm planning work on AI in mental health.",
     teaching: "Seven years of university teaching in programming, web development, big data analysis and software engineering, at the University of Tasmania, Charles Sturt University and the Ultimo Study Centre. Six Student Nominated Teaching Awards.",
@@ -33,12 +33,12 @@ window.SITE = {
   /* ---------------- Bio page ---------------- */
   bio: [
     "I'm an early-career AI researcher and lecturer in Sydney. I build machine learning models that adapt as people's behaviour changes, and apply them to biometric authentication and education. My PhD in Information Technology (University of Tasmania, 2026) looked at dynamic adaptation in multimodal biometric authentication.",
-    "I'm now Academic Manager (Business) and Senior Lecturer at Education Centre of Australia, which delivers University of Tasmania programs at the Ultimo Study Centre, and an Adjunct Researcher in the UTAS School of ICT. I've taught at university level for seven years and received six Student Nominated Teaching Awards.",
+    "I'm now Academic Manager at Education Centre of Australia, which delivers and teach University of Tasmania programs at the Ultimo Study Centre, and an Adjunct Researcher in the UTAS School of ICT. I've taught at university level for seven years and received six Student Nominated Teaching Awards.",
     "Before academia I trained in economics and accounting and worked as an accountant at Air Liquide Korea, where I tested the finance side of an Oracle ERP migration."
   ],
   employment: [
     { when: "Oct 2026–present", what: "Adjunct Researcher", where: "School of ICT, University of Tasmania" },
-    { when: "Aug 2026–present", what: "Academic Manager (Business) / Senior Lecturer", where: "Education Centre of Australia, Sydney" },
+    { when: "Aug 2026–present", what: "Academic Manager", where: "Education Centre of Australia, Sydney" },
     { when: "Jun–Aug 2026", what: "Subject Writer (ICT)", where: "Ikon Institute of Australia, Sydney" },
     { when: "Jun 2025–Jul 2026", what: "Lecturer (ICT)", where: "Education Centre of Australia, Sydney" },
     { when: "Aug–Oct 2025", what: "Interim Academic Manager (ICT)", where: "Education Centre of Australia, Sydney" },
@@ -165,7 +165,7 @@ window.SITE = {
       { head: "Online delivery", text: "Brightspace and live Zoom sessions with shared whiteboard and breakout rooms." }
     ],
     roles: [
-      { org: "Education Centre of Australia (UTAS Ultimo Study Centre), Sydney", years: "Jun 2025–present", role: "Lecturer (ICT), then Academic Manager (Business) / Senior Lecturer",
+      { org: "Education Centre of Australia (UTAS Ultimo Study Centre), Sydney", years: "Jun 2025–present", role: "Lecturer (ICT), Academic Manager",
         units: ["Programming Fundamentals (KIT101)", "Web Development (including SQL)", "ICT Systems Administration", "People and Organisations"] },
       { org: "Ikon Institute of Australia, Sydney", years: "Jun–Aug 2026", role: "Subject Writer (ICT): curriculum for two new subjects",
         units: ["Information Security", "Adversarial AI and Cyberdefence"] },
@@ -182,6 +182,7 @@ window.SITE = {
       { value: "2", label: "Teaching Merit Certificates", note: "University of Tasmania: 2021, 2023" },
       { value: "98.07%", label: "Student satisfaction", note: "Charles Sturt University, 2025 (57% response rate)" },
       { value: "89%", label: "Student satisfaction", note: "Charles Sturt University, 2025 (27% response rate)" }
+      { value: "100%", label: "Student satisfaction in Teaching Survey", note: "University of Tasmania, 2026 (60% response rate)" }
     ],
     supervision: [
       "Mentored a master's student through the systematic literature review process over four sessions and reviewed their paper. The student finished on time and moved on to further postgraduate study.",
