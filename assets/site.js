@@ -51,7 +51,7 @@ function boot(SCH) {
     ...S.profiles.map(p => `<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.label)}</a></li>`),
     S.cvPdf ? `<li><a href="${esc(S.cvPdf)}" download>CV (PDF)</a></li>` : ""
   ].join("");
-  const row = x => `<li><span class="when">${esc(x.when || "")}</span><span><strong>${esc(x.what)}</strong>${x.where ? `<span class="where">, ${esc(x.where)}</span>` : ""}${x.detail ? `<span class="detail">${esc(x.detail)}</span>` : ""}</span></li>`;
+  const row = x => `<li><span class="when">${esc(x.when || "")}</span><span><strong>${esc(x.what)}</strong>${x.where ? `<span class="where">, ${esc(x.where)}</span>` : ""}${x.detail ? `<span class="detail">${esc(x.detail)}</span>` : ""}${x.url ? `<a class="detail" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.urlLabel || "More")}</a>` : ""}</span></li>`;
   const list = arr => arr.map(row).join("");
   const paras = arr => arr.map(p => `<p>${esc(p)}</p>`).join("");
 
@@ -115,6 +115,7 @@ function boot(SCH) {
     set("#intro", `<p>${esc(S.intro)}</p><a class="more" href="bio.html">Read my bio</a>`);
     set("#researchBrief", `<p>${esc(S.home.research)}</p><a class="more" href="research.html">Research</a>`);
     set("#teachingBrief", `<p>${esc(S.home.teaching)}</p><a class="more" href="teaching.html">Teaching</a>`);
+    set("#awardsBrief", `<ul class="cv-list">${list(S.awards || [])}</ul>`);
     set("#engagementBrief", `<p>${esc(S.home.engagement)}</p><ul class="cv-list">${list(S.engagement)}</ul>`);
   }
 
@@ -125,6 +126,7 @@ function boot(SCH) {
     set("#employmentL", list(S.employment));
     set("#educationL", list(S.education));
     set("#membershipsL", list(S.memberships));
+    set("#awardsL", list(S.awards || []));
   }
 
   /* ---------- RESEARCH ---------- */
